@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HATORI Import Export Co., Ltd. — Vietnamese Food, Beverages, FMCG and Fresh Produce for global markets.">
+  <title>HATORI | From Vietnam to the World</title>
+
+  <style>
+    :root {
+      --green: #245b45;
+      --dark: #183b30;
+      --cream: #f7f6f0;
+      --gold: #c4a66a;
+      --text: #333a35;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      background: var(--white);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid #e9ece7;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .navbar {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      color: var(--green);
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 4px;
+    }
+
+    .logo small {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: #777;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 13px;
+      font-weight: 600;
+      color: #34483d;
+    }
+
+    nav a:hover {
+      color: #9a7a3d;
+    }
+
+    .hero {
+      background: var(--cream);
+      padding: 95px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: #9a7a3d;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      color: var(--dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(40px, 5vw, 64px);
+      line-height: 1.13;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      max-width: 520px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 25px;
+      background: var(--green);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .button:hover {
+      background: var(--dark);
+    }
+
+    .hero-image {
+      min-height: 390px;
+      background:
+        linear-gradient(135deg, rgba(24,59,48,.15), rgba(24,59,48,.02)),
+        linear-gradient(145deg, #dce5d8, #b5c9b3 48%, #e9e4d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .hero-image span {
+      color: var(--dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      max-width: 280px;
+      line-height: 1.4;
+    }
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      color: var(--dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 4vw, 44px);
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 22px;
+    }
+
+    .about-intro {
+      max-width: 900px;
+      font-size: 16px;
+    }
+
+    .about-intro p {
+      margin-bottom: 18px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 45px;
+    }
+
+    .feature {
+      background: var(--cream);
+      padding: 32px;
+      border-top: 3px solid var(--gold);
+    }
+
+    .feature h3 {
+      color: var(--dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 1.35;
+      margin-bottom: 16px;
+    }
+
+    .products {
+      background: var(--cream);
+    }
+
+    .section-lead {
+      max-width: 650px;
+      margin-bottom: 35px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .product-card {
+      min-height: 205px;
+      padding: 28px;
+      background: var(--white);
+      border: 1px solid #e8e9e1;
+    }
+
+    .product-card .number {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 22px;
+    }
+
+    .product-card h3 {
+      color: var(--dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .contact {
+      background: var(--dark);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .contact .section-heading {
+      color: var(--white);
+    }
+
+    .contact p {
+      max-width: 650px;
+      margin: 0 auto 26px;
+    }
+
+    .contact .button {
+      background: var(--white);
+      color: var(--dark);
+    }
+
+    footer {
+      background: #122d24;
+      color: #dce4dd;
+      padding: 25px 0;
+      font-size: 12px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 760px) {
+      .navbar {
+        padding: 18px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 15px;
+      }
+
+      .hero {
+        padding: 60px 0;
+      }
+
+      .hero-grid,
+      .features,
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        min-height: 260px;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">
+        HATORI
+        <small>IMPORT EXPORT CO., LTD.</small>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="products.html">PRODUCTS</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Greetings from Vietnam</div>
+          <h1>From Vietnam, thoughtfully prepared for the world.</h1>
+          <p>
+            HATORI connects Vietnamese food, beverages, FMCG, and fresh
+            produce with customers in international markets.
+          </p>
+          <a class="button" href="products.html">EXPLORE OUR PRODUCTS</a>
+        </div>
+
+        <div class="hero-image">
+          <span>Vietnamese Products<br>for Global Markets</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="eyebrow">Who We Are</div>
+        <h2 class="section-heading">ABOUT US</h2>
+
+        <div class="about-intro">
+          <p>
+            HATORI Import Export Co., Ltd. is one of the leading exporters
+            and suppliers of Asian Food &amp; Beverage products in Vietnam.
+            We are happy to supply well-known brands and high-quality
+            products to wholesalers and retailers in over 10 countries
+            worldwide. Our strength lies in excellent customer service,
+            quality products, and competitive pricing. With extensive
+            experience in Asian products, our dedicated sales team focuses
+            on understanding customer needs and providing responsive,
+            customized solutions to supermarkets, wholesalers, and
+            distributors across Asia, Europe, Oceania, and island markets.
+          </p>
+        </div>
+
+        <div class="features">
+          <article class="feature">
+            <h3>From our wide variety of quality products to your store shelves</h3>
+            <p>
+              We – HATORI Import Export Co., Ltd are proud to be your
+              trusted supplier of Asian products, helping you bring quality
+              products to your customers.
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3>From Reliable Logistics to Efficient Delivery</h3>
+            <p>
+              We work with experienced logistics partners to provide
+              flexible shipping solutions and efficient export services,
+              ensuring every shipment is handled professionally.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="products" id="products">
+      <div class="container">
+        <div class="eyebrow">Our Categories</div>
+        <h2 class="section-heading">Products for Your Business</h2>
+        <p class="section-lead">
+          Explore a range of products from Vietnam for importers,
+          wholesalers, retailers, and distributors.
+        </p>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="number">01 / FOOD</div>
+            <h3>Food &amp; Beverages</h3>
+            <p>Packaged foods, canned products, snacks, sauces, and beverages.</p>
+          </article>
+
+          <article class="product-card">
+            <div class="number">02 / FMCG</div>
+            <h3>FMCG</h3>
+            <p>Everyday consumer goods for different retail and distribution needs.</p>
+          </article>
+
+          <article class="product-card">
+            <div class="number">03 / FRESH</div>
+            <h3>Fresh Fruits &amp; Vegetables</h3>
+            <p>Vietnamese fresh produce for international markets.</p>
+          </article>
+        </div>
+
+        <p style="margin-top: 30px;">
+          <a class="button" href="products.html">VIEW PRODUCT CATEGORIES</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="eyebrow">Let's Connect</div>
+        <h2 class="section-heading">Looking for Products from Vietnam?</h2>
+        <p>
+          Contact HATORI to discuss your product interests, specifications,
+          packaging requirements, and export inquiries.
+        </p>
+        <a class="button" href="contact.html">CONTACT HATORI</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <span>© 2024 HATORI Import Export Co., Ltd. All rights reserved.</span>
+      <span>Vietnam</span>
+    </div>
+  </footer>
+</body>
+</html>
